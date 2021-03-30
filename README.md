@@ -93,43 +93,6 @@
 
 # Real Estate Bill Generator
 
-### 27/11/2020
-
-Code:
-* implemented unit price and pvm generation for each utility
-
-### 13/11/2020
-
-Code
-* implemented current monthly bill report when chosen all properties
-
-### 12/10/2020
-
-Code
-* implemented current month bill generation
-
-### 11/11/2020
-
-Code
-* implemented custom bill generation. User can choose all properties, utilities and date for each utility (with partial input validation)
-* moved bill related actions to separated class
-
-### 11/10/2020
-
-Github
-* updated sandbox_database.sql file
-* uploaded database schema photo
-
-Code
-* fixed database schema
-* fixed getIndicatorsByProperty method to correctly get Indicator list
-* simplified DatabaseConfig
-* removed unused mothods
-* added bill generation by address
-
-(updated Upcoming section)
-
-
 ### Getting Started
 
 - <a href="https://drive.google.com/uc?export=view&id=1yl5RxNSI3tf5IwM2GERUDNd7IEUV4jXT" download>sandbox_database.sql</a>
@@ -156,46 +119,6 @@ Code
 
 ![image](https://drive.google.com/uc?export=view&id=1HQZ1744mkivKzUrVeUScUpvtJ54Vyzs8)
 <!-- To do: add sandbox sql file -->
-
----
-
-### Upcoming
-
-~~__Fixed Indicators database table__~~
-
-~~Indicators table will have property ID. Property table will contain ID, type, address data only.~~
-
-~~__NEW Bill table__~~
-
-~~Bill table will include ID, personalcode, date, filtering cmd, json report for filtering cmd. Joined with User table~~
-
-__Filtering__
-
-~~Ability to choose utilities and dates for each properties.~~ Save the following user input as filteringCmd
-
-filteringCmd example: address+all+2020-08,2020-07,2020-04,2020-08,2020-07;another address+Electricity,Water+2020-09
-
-ToDo
-
-* ~~make a choice for user to pick all properties via input~~
-
-* ~~make a choice for user to pick all utilities via input~~
-
-__Export bill__
-
-Generate bill name by chosen filter
-
-__User filtering history__
-
-Allow user to look which filters were used to generate bill reports. If entered filtering were used before, system will notify user and then will extract from database
-
-__Check user bills contains custom filter__
-
-Custom filter will include users custom filtering, by that the filter will be parsed and json report will be generated, inserted into Bill table ( this will enable user history and instead generating report the already existed report will be suggested and showsn from database )
-
-~~__Recheck calculations__~~
-
-~~Check when using filters if correct calculations are applied to calculate utility and total prices
 
 ---
 
